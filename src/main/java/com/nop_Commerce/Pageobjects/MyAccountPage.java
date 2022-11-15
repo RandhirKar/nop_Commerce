@@ -26,13 +26,12 @@ public class MyAccountPage extends BaseClass {
 	@FindBy(css = "input.button-1.change-password-button")
 	WebElement ChangePasswordBtn;
 
-	@FindBy(xpath = "/html/body/div[6]/div[3]/div/div[2]/div/div[2]/div")
+	@FindBy(xpath = "//*[contains(@class,',result,')]")
 	public WebElement resultLbl;
 
 	public void openChangePasswordPage() {
 		clickButton(changePasswordLink);
 	}
-
 	public void ChangePassword(String oldpassword, String newpassword) {
 		setTextElementText(oldPasswordTxt, oldpassword);
 		setTextElementText(newPasswordTxt, newpassword);

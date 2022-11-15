@@ -32,7 +32,7 @@ public class UserRegistrationPage extends BaseClass {
 	@FindBy(id = "register-button")
 	WebElement registerBtn;
 
-	@FindBy(xpath = "/html/body/div[6]/div[3]/div/div/form/div/div[2]/div[1]")
+	@FindBy(xpath = "//*[contains(@class,',result,')]"
 	public WebElement successMessage;
 
 	@FindBy(linkText = "Log out")
