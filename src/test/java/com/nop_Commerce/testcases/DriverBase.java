@@ -20,6 +20,7 @@ import com.nop_Commerce.utilities.Helper;
 
 public class DriverBase {
 	WebDriver driver;
+
 	protected static ThreadLocal<ChromeDriver> driver1=new ThreadLocal<>();
 	
 	@BeforeMethod
@@ -35,6 +36,7 @@ public class DriverBase {
 	public void tearDown() {
 		getDriver().quit();
 	}
+
 
 	@BeforeSuite
 	@Parameters({ "browser" })
@@ -93,4 +95,5 @@ public class DriverBase {
 		}
 
 	}
-}
+
+
