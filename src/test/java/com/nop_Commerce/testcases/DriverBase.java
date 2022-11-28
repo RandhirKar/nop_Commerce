@@ -12,6 +12,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
@@ -19,6 +20,23 @@ import com.nop_Commerce.utilities.Helper;
 
 public class DriverBase {
 	WebDriver driver;
+
+	protected static ThreadLocal<ChromeDriver> driver1=new ThreadLocal<>();
+	
+	@BeforeMethod
+	public void setUp() {
+		System.setProperty("webdriver.chrome.driver", "C:\\Browserdriver\\chromedriver.exe");
+		driver1.set(new ChromeDriver());
+	}
+	
+	public WebDriver getDriver() {
+		return driver1.get();
+	}
+	@AfterMethod
+	public void tearDown() {
+		getDriver().quit();
+	}
+
 
 	@BeforeSuite
 	@Parameters({ "browser" })
@@ -77,4 +95,5 @@ public class DriverBase {
 		}
 
 	}
-}
+
+
