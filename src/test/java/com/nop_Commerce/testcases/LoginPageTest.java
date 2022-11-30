@@ -5,20 +5,19 @@ import org.testng.annotations.Test;
 import com.nop_Commerce.Pageobjects.HomePage;
 import com.nop_Commerce.Pageobjects.LoginPage;
 
+public class LoginPageTest  extends DriverBase{
 
-public class LoginPageTest  extends TestBase{
-
-	HomePage HomeObject ;
-	LoginPage loginobject ; 
+	HomePage HomePage;
+	LoginPage loginPage ; 
 	
 	@Test(priority=1,alwaysRun=true)
-	public void userCanLoginSuccessfully() throws InterruptedException {
-		HomeObject = new HomePage(driver);
-		HomeObject.OpenLoginpage();
-		loginobject = new LoginPage(driver);
-		loginobject.userLogin("randhirall20@gmail.com", "automation");
-		Assert.assertTrue(loginobject.successloginAssertion.getText().contains("Welcome to our store"));
-		Thread.sleep(3000);
+	public void userCanLoginSuccessfully(){
+		HomePage = new HomePage(driver);
+		HomePage.OpenLoginpage();
+		loginPage = new LoginPage(driver);
+		loginPage.userLogin("randhirall20@gmail.com", "automation");
+		Assert.assertTrue(loginPage.successloginAssertion.getText().contains("Welcome to our store"));
+		
 	}
 }
 

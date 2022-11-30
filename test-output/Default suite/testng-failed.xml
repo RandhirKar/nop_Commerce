@@ -3,6 +3,7 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< Updated upstream
       <class name="com.nop_Commerce.testcases.LoginPageTest">
         <methods>
           <include name="stopDriver"/>
@@ -11,6 +12,17 @@
           <include name="screenShotOnFailure"/>
         </methods>
       </class> <!-- com.nop_Commerce.testcases.LoginPageTest -->
+=======
+      <class name="com.nop_Commerce.testcases.Registration_GroupTest">
+        <methods>
+          <include name="dataSetup"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+          <include name="btest2"/>
+          <include name="dataTeardown"/>
+        </methods>
+      </class> <!-- com.nop_Commerce.testcases.Registration_GroupTest -->
+>>>>>>> Stashed changes
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

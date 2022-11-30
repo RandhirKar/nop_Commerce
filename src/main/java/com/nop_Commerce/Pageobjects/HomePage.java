@@ -11,17 +11,19 @@ public class HomePage extends BaseClass {
 		super(driver);
 	}
 
-	@FindBy(linkText = "Register")
-	WebElement registerLink;
-
-	@FindBy(className = "ico-login")
-	WebElement loginlink;
-
-	public void openRegistrationPage() {
+	@FindBy(linkText="Register")
+	WebElement registerLink ;
+	
+	@FindBy(className="ico-login")
+	WebElement loginlink ;
+	
+	
+	public void openRegistrationPage () {
 		clickButton(registerLink);
 	}
+	
 
-	public void OpenLoginpage() {
+	public void OpenLoginpage ( ) {
 		clickButton(loginlink);
 	}
 }

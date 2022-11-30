@@ -17,7 +17,7 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import com.nop_Commerce.utilities.Helper;
 
-public class TestBase {
+public class DriverBase {
 	WebDriver driver;
 
 	@BeforeSuite
