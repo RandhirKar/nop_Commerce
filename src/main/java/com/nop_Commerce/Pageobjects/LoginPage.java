@@ -20,7 +20,7 @@ public class LoginPage extends BaseClass {
 	@FindBy(id = "RememberMe")
 	WebElement rememberMeCheck;
 
-	@FindBy(xpath = "//*[@class='button-1 login-button']")
+	@FindBy(xpath = "//a[contains(@class,'ico-login')]")
 	WebElement loginBtn;
 
 	@FindBy(xpath = "/html/body/div[6]/div[3]/div/div/div/div/div[2]/div[1]/h2")
